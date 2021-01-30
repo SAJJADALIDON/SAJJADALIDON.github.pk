@@ -1,0 +1,74 @@
+/*
+
+Theme Name: 
+Theme URI: 
+Description:
+Version:
+Author: 
+
+*/
+
+/* global mixins */
+@media print {
+
+/* global layout*/ 
+
+@page
+    {
+        size: auto; 
+        margin: 0.5cm 1cm;
+    }
+
+body {
+    font-size: 12px;
+    background: #f6f6f6;
+    color: #333;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+strong { font-weight: bold }
+
+em { font-style: italic }
+
+h1 {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px 0 0px;
+}
+
+h2, h3, h4, h5, h6{
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #dddddd;
+}
+
+
+.nav, .btn-group, .content-nav{
+    display: none;
+}
+
+.box-header{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.text-center{
+    text-align: center !important;
+    padding: 0 auto;
+}
+.thumbnail{
+    float: left;
+    margin: 8px 0;
+    display: inline-block;
+    width: 25% !important;
+}
+
+.item_code{
+    text-align: center;
+    display: block !important;
+
+}

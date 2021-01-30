@@ -1,0 +1,262 @@
+/*
+
+Theme Name: 
+Theme URI: 
+Description:
+Version:
+Author: 
+
+*/
+
+/* global mixins */
+@media print {
+
+/* global layout*/ 
+
+body {
+    font-size: 12px;
+    background: #f6f6f6;
+    color: #333;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+strong { font-weight: bold }
+
+em { font-style: italic }
+
+h1 {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px 0 0px;
+}
+
+h2, h3, h4, h5, h6{
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #dddddd;
+}
+
+#invoice {
+    position: relative;
+    background: #f6f6f6;
+    border-top: 5px solid #9FCB49;
+}
+/*
+#invoice.unpaid:before, #invoice.paid:before {
+    position: absolute;
+    top: -20px;
+    right: 0;
+    left: 0;
+    height: 10px;
+    background: red;
+    background: rgba(187, 0, 0, 0.8);
+    content: "";
+}
+
+#invoice.paid:before {
+    background: green;
+    background: rgba(122, 185, 0, 0.7);
+}
+*/
+.this-is {
+    padding: 4px 0;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+}
+
+#header { padding-bottom: 20px; }
+
+.invoice-intro {
+    width: 60%;
+    float: left;
+}
+.invoice-intro p {
+    font-size: 12px;
+    font-style: italic;
+    line-height: 1.5em;
+    padding-bottom: 20px;
+}
+
+.invoice-meta {
+    float: left;
+    width: 40%;
+    position: relative;
+    overflow: hidden;
+    text-align: right;
+    line-height: 1.5em;
+}
+
+.invoice-meta dt {
+    float: left;
+    width: 50%;
+    clear: both;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.invoice-meta dd {
+    width: 30%;
+    float: right;
+    font-size: 12px;
+    text-align: right;
+}
+
+#parties {
+    position: relative;
+    overflow: hidden;
+}
+
+.invoice-to, .invoice-from, .invoice-status {
+    width: 33%;
+    float: left;
+    text-align: left;
+    padding-bottom: 30px;
+}
+.invoice-status {
+    width: 22%;
+    float: left;
+    text-align: left;
+    padding-bottom: 30px;
+}
+.invoice-blabk {
+    width: 6%;
+    float: left;
+    padding-bottom: 30px;
+}
+
+.invoice-status .paddings {
+    font-weight: bold;
+    color: #fff;
+    display: block;
+    padding: 8px;
+    background: green;
+    background: rgba(122, 185, 0, 0.7);
+}
+
+
+
+
+.unpaid .invoice-pay ul {
+    padding: 12px;
+    border-right: 10px solid  red;
+    border-right: 10px solid rgba(187, 0, 0, 0.8);
+}
+
+.gcheckout{
+    float: right;
+    height: 32px;
+    width: 117px;
+    text-indent: -9999em;
+    background-image: url(data:image/gif;base64,R0lGODlhdQAwAOZ/AIrQsD+G8Y+s28fa9i9lufHx8djl+HGk82qRz9pENjl85AaaWEKL+TV23fX19VaY+ujo6Eq1hfn5+aFLYIiIiDZtyb6+vj2C7a7Zvurq6kGI9Wie7zd54fjntPjMRtNvbFaFz6ampuzs7DFqwgqiXe2RP+7u7peXlw+oYjp+5+rw+TGpctS8due1sTh64pa79eTr9+fRxrfK6CZduPrx2bzT9ytkwzVz1J+33nvDn63K9jZxzZG07FyU7NQ+MbOzs8fk16rC5oKl2/WuS0yZQ7/S8PH1+zl520eF5pC39MSdK+Ll69pWTLfP9cihMLzfz0eP+kKK98yrT/X5/jd32eNkO9PZ4z2A6jh631SP6x9Vrzl84ea6OaHC9TBx2N7x6IOt7/z8/ECH80GJ9j6E7/7+/vv7+zt/6TyG9vnJQN9JPUqL7+qHb62bLzifUTmhUXyd1Ep3wH1Xhqu/3uB/djd11zFtzECI80SN+XyaOUOI9MfQ3+fn5zZ43////wAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOkZDN0YxMTc0MDcyMDY4MTFBNzY4RkU5M0ZEREJEQkM4IiB4bXBNTTpEb2N1bWVu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);
+}
+
+.acheckout{
+    float: right;
+    height: 38px;
+    width: 173px;
+    text-indent: -9999em;
+}
+
+.invoice-items, .invoice-totals {
+    text-align: right;
+    padding-bottom: 30px;
+    border: 1px solid black;    
+    width: 100%;
+    height: auto;
+    font-size: 12px;
+}
+.invoice-totals table {
+    float: right;
+    width: 50%;
+    font-size: 12px;
+}
+.empty_box{
+    width: 100%;
+    border: 1px solid #000;    
+}
+/*
+.invoice-items caption, .invoice-totals caption {
+    font-size: 26px;
+    font-weight: bold;
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #dddddd;
+    text-align: left;
+}
+*/
+thead th{
+    font-weight: normal;
+    padding: 68x 0;
+    background-color: #e5e5e5;
+}
+
+.invoice-items thead tc, .invoice-totals thead tc { text-align: center }
+
+.invoice-items thead th:first-of-type, .invoice-totals thead th:first-of-type { padding-left: 8px }
+
+.invoice-items thead th:last-of-type, .invoice-totals thead th:last-of-type {
+    text-align: right;
+    padding-right: 8px;
+}
+
+.invoice-items tbody tr th, .invoice-totals tbody tr th { padding-left: 8px }
+
+.invoice-items tbody tr td:last-of-type, .invoice-totals tbody tr td:last-of-type {
+    text-align: right;
+    padding-right: 8px;
+}
+
+.invoice-items tbody tr:nth-of-type(even) th, .invoice-totals tbody tr:nth-of-type(even) th, .invoice-items tbody tr:nth-of-type(even) td, .invoice-totals tbody tr:nth-of-type(even) td { background-color: #eee }
+
+.invoice-items tbody th, .invoice-totals tbody th, .invoice-items tbody td, .invoice-totals tbody td {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    background: #fff;
+}
+
+.invoice-items tbody td, .invoice-totals tbody td { padding-left: 3px; }
+
+.invoice-items tfoot td, .invoice-totals tfoot td {
+    text-align: right;
+    font-size: 11px;
+    font-weight: bold;
+    background: #e5e5e5;
+    padding: 6px 8px;
+}
+
+.invoice-pay { padding-top: 30px }
+
+.invoice-pay li {
+    overflow: hidden;
+    padding-top: 12px;
+}
+
+.invoice-pay li:nth-of-type(even) { padding-top: 18px }
+
+.invoice-pay ul li { 
+    display: block;
+    font-weight: normal;
+    font-size: large;
+    color: #000;
+    padding: 8px 20px;
+    background-color: lightgrey;
+    text-align: right;
+}
+
+.invoice-notes {
+    text-align: left;
+    padding-bottom: 30px;
+}
+
+.invoice-notes p, .invoice-notes ul, .invoice-notes ol, .invoice-notes dl { padding-bottom: 1em }
+
+.invoice-notes ul li { list-style: inside disc }
+
+.invoice-notes ol li { list-style: inside decimal }
+
+}
